@@ -113,8 +113,45 @@ footer{
     border-radius:25px;
     font-weight:bold;
 }
+
+.fall-item{
+    position:fixed;
+    top:-50px;
+    pointer-events:none;
+    z-index:3;
+    animation: fall linear infinite;
+}
+
+@keyframes fall{
+    0%{
+        transform: translateY(-50px) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform: translateY(110vh) rotate(360deg);
+        opacity:0.9;
+    }
+}
+
 </style>
 </head>
+<script>
+const fallItems = ["🌸","🧧","💰"];
+
+function createFall(){
+    const el = document.createElement("div");
+    el.className = "fall-item";
+    el.innerText = fallItems[Math.floor(Math.random()*fallItems.length)];
+    el.style.left = Math.random()*100 + "vw";
+    el.style.fontSize = (22 + Math.random()*18) + "px";
+    el.style.animationDuration = (5 + Math.random()*5) + "s";
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),10000);
+}
+
+setInterval(createFall,300);
+</script>
+
 
 <body>
 
