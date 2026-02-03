@@ -113,92 +113,8 @@ footer{
     border-radius:25px;
     font-weight:bold;
 }
-
-/* ===== HIỆU ỨNG LÌ XÌ – TIỀN – XU – HOA RƠI ===== */
-.fall-item{
-    position: fixed;
-    top: -60px;
-    pointer-events: none;
-    user-select: none;
-    animation: fall linear forwards;
-    z-index: 10;
-    opacity: 0.95;
-}
-
-@keyframes fall{
-    from{
-        transform: translateY(-60px) rotate(0deg);
-    }
-    to{
-        transform: translateY(110vh) rotate(360deg);
-    }
-}
-
-
-
-
-
 </style>
 </head>
-
-<script>
-/* ===== HIỆU ỨNG RƠI TẾT ===== */
-const fallItems = ["🧧","💰","🪙","🌸","🌼"];
-
-function createFallItem(){
-    const item = document.createElement("div");
-    item.className = "fall-item";
-    item.innerText = fallItems[Math.floor(Math.random()*fallItems.length)];
-
-    const size = Math.random()*18 + 18;
-    item.style.fontSize = size + "px";
-    item.style.left = Math.random()*100 + "vw";
-    item.style.animationDuration = (Math.random()*3 + 4) + "s";
-
-    document.body.appendChild(item);
-
-    setTimeout(()=> item.remove(), 8000);
-}
-
-/* tạo liên tục */
-setInterval(createFallItem, 300);
-
-
-/* Animation mờ dần */
-@keyframes blurOut {
-    from {
-        filter: blur(8px);
-        opacity: 0.7;
-    }
-    to {
-        filter: blur(4px);
-        opacity: 1;
-    }
-}
-
-@keyframes blurIn {
-    from {
-        filter: blur(4px);
-        opacity: 1;
-    }
-    to {
-        filter: blur(8px);
-        opacity: 0.7;
-    }
-}
-
-/* Trạng thái ban đầu */
-#bg-video {
-    filter: blur(8px);
-    transition: filter 1.2s ease, opacity 1.2s ease;
-}
-
-/* Khi vào trang chính */
-#bg-video.active {
-    animation: blurOut 1.5s ease forwards;
-}
-
-</script>
 
 <body>
 
@@ -224,8 +140,6 @@ setInterval(createFallItem, 300);
 
 <div id="content">
 <div class="content-grid">
-
-
 
 <!-- 1 -->
 <div class="section">
@@ -437,10 +351,6 @@ Nhiều địa phương cho học sinh nghỉ Tết 14 ngày
 function enterSite(){
     welcome.style.display="none";
     content.style.display="block";
-
-
-document.getElementById("bg-video").classList.add("active");
-
 }
 
 const tetDate = new Date("2026-02-17T00:00:00").getTime();
