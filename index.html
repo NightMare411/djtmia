@@ -162,6 +162,42 @@ function createFallItem(){
 
 /* tạo liên tục */
 setInterval(createFallItem, 300);
+
+
+/* Animation mờ dần */
+@keyframes blurOut {
+    from {
+        filter: blur(8px);
+        opacity: 0.7;
+    }
+    to {
+        filter: blur(4px);
+        opacity: 1;
+    }
+}
+
+@keyframes blurIn {
+    from {
+        filter: blur(4px);
+        opacity: 1;
+    }
+    to {
+        filter: blur(8px);
+        opacity: 0.7;
+    }
+}
+
+/* Trạng thái ban đầu */
+#bg-video {
+    filter: blur(8px);
+    transition: filter 1.2s ease, opacity 1.2s ease;
+}
+
+/* Khi vào trang chính */
+#bg-video.active {
+    animation: blurOut 1.5s ease forwards;
+}
+
 </script>
 
 <body>
@@ -401,6 +437,10 @@ Nhiều địa phương cho học sinh nghỉ Tết 14 ngày
 function enterSite(){
     welcome.style.display="none";
     content.style.display="block";
+
+
+document.getElementById("bg-video").classList.add("active");
+
 }
 
 const tetDate = new Date("2026-02-17T00:00:00").getTime();
