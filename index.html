@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tết Nguyên Đán 2026</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+#bg-video{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    z-index:-1;
+}
+#welcome{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+#countdown{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+.time-box{
+    background:rgba(255,215,0,0.95);
+    color:#b30000;
+    padding:12px 16px;
+    border-radius:12px;
+    min-width:70px;
+}
+.btn{
+    background:linear-gradient(135deg,#ffd700,#ff3b3b);
+    border:none;
+    padding:16px 38px;
+    font-size:20px;
+    border-radius:50px;
+    color:#fff;
+    cursor:pointer;
+}
+#content{
+    display:none;
+    padding:40px 15px;
+}
+.content-grid{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+.section{
+    background:#fff;
+    border-radius:16px;
+    padding:26px;
+    border:4px solid #d62828;
+}
+.news-image{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:6px;
+}
+.image-caption{
+    font-size:13px;
+    color:#666;
+    margin-bottom:16px;
+    text-align:center;
+}
+.news-title{
+    font-size:26px;
+    font-weight:700;
+    color:#0a7a3d;
+    margin-bottom:18px;
+}
+.news-content p, 
+.news-content li{
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:12px;
+    color:#222;
+}
+footer{
+    text-align:center;
+    color:#fff;
+    margin:40px 0;
+}
+#music-toggle{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#ffd700;
+    border:none;
+    padding:10px 16px;
+    border-radius:25px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<video id="bg-video" autoplay muted loop>
+    <source src=" https://NightMare411.github.io/tetnguyendan2026/bg1.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<audio id="bg-music" loop>
+    <source src=" https://NightMare411.github.io/tetnguyendan2026/tet-music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="welcome">
+    <h1>🎊 Chào Mừng Tết Nguyên Đán 2026 🎊</h1>
+    <div id="countdown">
+        <div class="time-box"><span id="days">0</span><br>Ngày</div>
+        <div class="time-box"><span id="hours">0</span><br>Giờ</div>
+        <div class="time-box"><span id="minutes">0</span><br>Phút</div>
+        <div class="time-box"><span id="seconds">0</span><br>Giây</div>
+    </div>
+    <button class="btn" onclick="enterSite()">🎉 Vào Trang Chính 🎉</button>
+</div>
+
+<div id="content">
+<div class="content-grid">
+
+<!-- 1 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/flow1.png" class="news-image">
+<div class="image-caption">Không khí Tết cổ truyền Việt Nam</div>
+<div class="news-title">1. Tết Nguyên Đán là gì?</div>
+<div class="news-content">
+<p>Tết Nguyên Đán là ngày lễ truyền thống quan trọng và thiêng liêng nhất của người Việt Nam, đánh dấu thời khắc chuyển giao giữa năm cũ và năm mới theo âm lịch.</p>
+<p>Đây là dịp mọi người tạm gác lại công việc, trở về sum họp bên gia đình, tưởng nhớ tổ tiên và hướng đến những điều tốt đẹp.</p>
+<p>Tết còn mang ý nghĩa khởi đầu mới, thể hiện niềm tin vào sự may mắn, sức khỏe và thành công trong năm sắp tới.</p>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/flow2.png" class="news-image">
+<div class="image-caption">Nguồn gốc nông nghiệp của Tết</div>
+<div class="news-title">2. Nguồn gốc của ngày Tết</div>
+<div class="news-content">
+<p>Tết Nguyên Đán bắt nguồn từ nền văn minh lúa nước, gắn liền với chu kỳ canh tác nông nghiệp của người Việt xưa.</p>
+<p>Sau một năm lao động vất vả, người dân tổ chức lễ Tết để cảm tạ trời đất, thần linh đã ban cho mùa màng bội thu.</p>
+<p>Trải qua hàng nghìn năm, Tết đã trở thành một nét văn hóa đặc trưng không thể thiếu trong đời sống tinh thần dân tộc.</p>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/flow3.png" class="news-image">
+<div class="image-caption">Giá trị tinh thần của ngày Tết</div>
+<div class="news-title">3. Ý nghĩa của ngày Tết</div>
+<div class="news-content">
+<p>Tết mang ý nghĩa đoàn viên, gắn kết các thế hệ trong gia đình.</p>
+<p>Là dịp để mỗi người nhìn lại những gì đã qua, rút ra bài học cho bản thân.</p>
+<p>Tết cũng thể hiện tinh thần sẻ chia, giúp đỡ nhau, lan tỏa những giá trị nhân văn tốt đẹp.</p>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/flow4.png" class="news-image">
+<div class="image-caption">Phong tục Tết truyền thống</div>
+<div class="news-title">4. Phong tục ngày Tết</div>
+<div class="news-content">
+<p>Dọn dẹp, trang trí nhà cửa với hoa mai, hoa đào, câu đối đỏ.</p>
+<p>Gói bánh chưng, bánh tét – biểu tượng cho đất trời và lòng hiếu thảo.</p>
+<p>Chúc Tết, mừng tuổi nhằm gửi lời cầu chúc may mắn đầu năm.</p>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/amthuc.png" class="news-image">
+<div class="image-caption">Ẩm thực ngày Tết</div>
+<div class="news-title">5. Món ăn truyền thống</div>
+<div class="news-content">
+
+<p>Ẩm thực ngày Tết rất phong phú, mỗi món ăn đều mang ý nghĩa riêng, thể hiện mong ước đủ đầy và sung túc.</p>
+
+<ol>
+<li><b>Bánh chưng, bánh tét:</b> Biểu tượng cho đất trời, thể hiện lòng biết ơn tổ tiên.</li>
+<li><b>Thịt kho tàu:</b> Món ăn quen thuộc, mang ý nghĩa sum vầy, ấm no.</li>
+<li><b>Dưa hành, củ kiệu:</b> Giúp cân bằng hương vị, tượng trưng cho sự hòa hợp.</li>
+<li><b>Canh măng:</b> Thể hiện sự trường thọ và sung túc.</li>
+<li><b>Mứt Tết:</b> Đại diện cho lời chúc ngọt ngào đầu năm.</li>
+</ol>
+
+<div style="margin-top:20px; position:relative; padding-bottom:56.25%; height:0;">
+<iframe
+    class="yt-video"
+    src="https://www.youtube.com/embed/2fT9tS2MBCc?enablejsapi=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+</iframe>
+</div>
+
+</div>
+</div>
+
+<!-- 6 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/flow6.png" class="news-image">
+<div class="image-caption">Văn hóa Tết ba miền</div>
+<div class="news-title">6. Văn hóa ba miền</div>
+<div class="news-content">
+<p>Mỗi miền Bắc – Trung – Nam có phong tục và món ăn ngày Tết khác nhau.</p>
+<p>Chính sự đa dạng đó đã tạo nên bản sắc văn hóa phong phú của dân tộc Việt Nam.</p>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/aodai.jpg" class="news-image">
+<div class="image-caption">Trang phục truyền thống</div>
+<div class="news-title">7. Trang phục ngày Tết</div>
+<div class="news-content">
+
+<p>Trang phục ngày Tết không chỉ mang tính thẩm mỹ mà còn thể hiện bản sắc và nét đẹp văn hóa.</p>
+
+<ul>
+<li>Áo dài truyền thống dành cho cả nam và nữ.</li>
+<li>Áo dài cách tân với màu sắc tươi sáng.</li>
+<li>Trang phục mang gam màu đỏ, vàng tượng trưng cho may mắn.</li>
+<li>Họa tiết hoa mai, hoa đào, chim én mang ý nghĩa mùa xuân.</li>
+<li>Trang phục mới thể hiện sự khởi đầu thuận lợi.</li>
+</ul>
+
+<div style="margin-top:20px; position:relative; padding-bottom:56.25%; height:0;">
+<iframe
+    class="yt-video"
+    src="https://www.youtube.com/embed/FeKWAiHUqgQ?enablejsapi=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+</iframe>
+</div>
+
+</div>
+</div>
+
+<!-- 8 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/flow8.jpg" class="news-image">
+<div class="image-caption">Âm nhạc mùa xuân</div>
+<div class="news-title">8. Âm nhạc ngày Tết</div>
+<div class="news-content">
+<p>Những bài hát xuân quen thuộc góp phần tạo không khí vui tươi, rộn ràng.</p>
+<p>Âm nhạc giúp kết nối cảm xúc và lưu giữ ký ức đẹp mỗi dịp Tết về.</p>
+
+<div style="margin-top:20px; position:relative; padding-bottom:56.25%; height:0;">
+<iframe
+    class="yt-video"
+    src="https://www.youtube.com/embed/gOtfJ151ue4?enablejsapi=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+</iframe>
+</div>
+
+</div>
+</div>
+
+
+
+
+<!-- 9 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/lichnghitet.png" class="news-image" style="width:100%;">
+<div class="image-caption">Lịch nghỉ Tết Nguyên Đán 2026</div>
+<div class="news-title">9. Lịch nghỉ Tết Nguyên Đán 2026</div>
+<div class="news-content">
+<p>
+Theo thông tin từ nhiều nguồn báo chí chính thống, Tết Nguyên Đán 2026
+dự kiến rơi vào giữa tháng 2 dương lịch. Nhiều địa phương trên cả nước
+đã lên phương án cho học sinh nghỉ Tết khoảng 14 ngày.
+</p>
+<p>
+Thời gian nghỉ Tết dài giúp học sinh có điều kiện sum họp gia đình,
+tham gia các hoạt động truyền thống, nghỉ ngơi và chuẩn bị tinh thần
+cho học kỳ mới sau kỳ nghỉ.
+</p>
+</div>
+</div>
+
+<!-- 10 -->
+<div class="section">
+<img src=" https://NightMare411.github.io/tetnguyendan2026/flow10.jpg" class="news-image">
+<div class="image-caption">Những câu chuyện đẹp ngày Tết</div>
+<div class="news-title">10. Các thông tin khác về Tết</div>
+<div class="news-content">
+<p>
+Bên cạnh không khí sum họp gia đình, Tết Nguyên Đán còn là dịp để lan
+tỏa yêu thương thông qua nhiều hoạt động xã hội mang ý nghĩa nhân văn sâu sắc.
+</p>
+
+<ul style="font-size:17px; line-height:1.9;">
+<li>
+<a href="https://tuoitre.vn/lan-toa-xuan-se-chia-bang-nhung-viec-lam-thiet-thuc-vi-tet-ven-tron-20260125120410705.htm" target="_blank">
+Lan tỏa xuân sẻ chia bằng những việc làm thiết thực
+</a>
+</li>
+<li>
+<a href="https://baomoi.com/cac-lang-nghe-vao-vu-tet-c54380624.epi " target="_blank">
+các làng nghề vào vụ tết
+</a>
+</li>
+<li>
+<a href="https://laodong.vn/du-lich/cong-dong/lich-nghi-tet-nguyen-dan-binh-ngo-2026-cua-hoc-sinh-moi-nhat-1647312.html " target="_blank">
+Nhiều địa phương cho học sinh nghỉ Tết 14 ngày
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+<button id="music-toggle" onclick="toggleMusic()">🔈 Nhạc</button>
+<footer>© 2026 – Website Tết Nguyên Đán Việt Nam</footer>
+
+<script>
+function enterSite(){
+    welcome.style.display="none";
+    content.style.display="block";
+}
+
+const tetDate = new Date("2026-02-17T00:00:00").getTime();
+setInterval(()=>{
+    const now = new Date().getTime();
+    const d = tetDate - now;
+    if(d < 0) return;
+    days.innerText = Math.floor(d / (1000*60*60*24));
+    hours.innerText = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+    minutes.innerText = Math.floor((d%(1000*60*60))/(1000*60));
+    seconds.innerText = Math.floor((d%(1000*60))/1000);
+},1000);
+
+const music=document.getElementById("bg-music");
+function toggleMusic(){
+    if(music.paused) music.play();
+    else music.pause();
+}
+document.addEventListener("click",()=>music.play(),{once:true});
+</script>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+const bgMusic = document.getElementById("bg-music");
+let ytPlayers = [];
+
+function onYouTubeIframeAPIReady() {
+    document.querySelectorAll(".yt-video").forEach((iframe, index) => {
+        ytPlayers[index] = new YT.Player(iframe, {
+            events: { onStateChange: onYTStateChange }
+        });
+    });
+}
+
+function onYTStateChange(event) {
+    if (event.data === YT.PlayerState.PLAYING) bgMusic.pause();
+    if (
+        event.data === YT.PlayerState.PAUSED ||
+        event.data === YT.PlayerState.ENDED
+    ) bgMusic.play();
+}
+</script>
+
+</body>
+</html>
