@@ -113,8 +113,56 @@ footer{
     border-radius:25px;
     font-weight:bold;
 }
+
+/* ===== HIỆU ỨNG LÌ XÌ – TIỀN – XU – HOA RƠI ===== */
+.fall-item{
+    position: fixed;
+    top: -60px;
+    pointer-events: none;
+    user-select: none;
+    animation: fall linear forwards;
+    z-index: 10;
+    opacity: 0.95;
+}
+
+@keyframes fall{
+    from{
+        transform: translateY(-60px) rotate(0deg);
+    }
+    to{
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+
+
+
+
 </style>
 </head>
+
+<script>
+/* ===== HIỆU ỨNG RƠI TẾT ===== */
+const fallItems = ["🧧","💰","🪙","🌸","🌼"];
+
+function createFallItem(){
+    const item = document.createElement("div");
+    item.className = "fall-item";
+    item.innerText = fallItems[Math.floor(Math.random()*fallItems.length)];
+
+    const size = Math.random()*18 + 18;
+    item.style.fontSize = size + "px";
+    item.style.left = Math.random()*100 + "vw";
+    item.style.animationDuration = (Math.random()*3 + 4) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(()=> item.remove(), 8000);
+}
+
+/* tạo liên tục */
+setInterval(createFallItem, 300);
+</script>
 
 <body>
 
@@ -140,6 +188,8 @@ footer{
 
 <div id="content">
 <div class="content-grid">
+
+
 
 <!-- 1 -->
 <div class="section">
